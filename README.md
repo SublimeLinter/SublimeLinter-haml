@@ -1,10 +1,10 @@
 SublimeLinter-haml
 =========================
 
-This linter plugin for [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter3) provides an interface to [haml](http://haml.info). It will be used with files that have the “Ruby Haml” syntax.
+This linter plugin for [SublimeLinter](http://sublimelinter.readthedocs.org) provides an interface to [haml](http://haml.info). It will be used with files that have the “Ruby Haml” syntax.
 
 ## Installation
-SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Installation).
+SublimeLinter 3 must be installed in order to use this plugin. If SublimeLinter 3 is not installed, please follow the instructions [here](http://sublimelinter.readthedocs.org/en/latest/installation.html).
 
 ### Linter installation
 Before using this plugin, you must ensure that `haml` is installed on your system. To install `haml`, do the following:
@@ -16,9 +16,9 @@ Before using this plugin, you must ensure that `haml` is installed on your syste
    [sudo] gem install haml
    ```
 
-1. If you are using `rbenv` or `rvm`, ensure that they are loaded in your shell’s correct startup file. See [here](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Usage#shell-startup-files) for more information.
+1. If you are using `rbenv` or `rvm`, ensure that they are loaded in your shell’s correct startup file. See [here](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#shell-startup-files) for more information.
 
-Once `haml` is installed, you must ensure it is in your system PATH so that SublimeLinter can find it. This may not be as straightforward as you think, so please read [How linter executables are located](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Usage#how-linter-executables-are-located) in the documentation.
+Once `haml` is installed, you must ensure it is in your system PATH so that SublimeLinter can find it. This may not be as straightforward as you think, so please read about [how linter executables are located](http://sublimelinter.readthedocs.org/en/latest/usage.html#how-linter-executables-are-located) in the documentation.
 
 Once you have installed `haml` you can proceed to install the SublimeLinter-haml plugin if it is not yet installed.
 
@@ -32,7 +32,7 @@ To install via Package Control, do the following:
 1. When the plugin list appears, type `haml`. Among the entries you should see `SublimeLinter-haml`. If that entry is not highlighted, use the keyboard or mouse to select it.
 
 ## Settings
-For general information on how SublimeLinter works with settings, please see [Settings](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Settings). For information on generic linter settings, please see [Linter Settings](https://github.com/SublimeLinter/SublimeLinter.github.io/wiki/Linter-Settings).
+For general information on how SublimeLinter works with settings, please see [Settings](http://sublimelinter.readthedocs.org/en/latest/settings.html). For information on generic linter settings, please see [Linter Settings](http://sublimelinter.readthedocs.org/en/latest/linter_settings.html).
 
 ## Contributing
 If you would like to contribute enhancements or fixes, please do the following:
