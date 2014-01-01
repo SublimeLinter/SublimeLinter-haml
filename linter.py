@@ -18,7 +18,7 @@ class Haml(RubyLinter):
     """Provides an interface to haml."""
 
     syntax = 'ruby haml'
-    cmd = 'haml -c --stdin *'
+    cmd = 'haml -c --stdin'
     regex = r'^(?:Syntax error on line (?P<line>\d+):|.+?[^:]:) (?P<message>.+)'
     error_stream = util.STREAM_STDERR
 
