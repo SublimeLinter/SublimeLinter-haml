@@ -18,9 +18,10 @@ Before using this plugin, you must ensure that `haml` is installed on your syste
 
 1. If you are using `rbenv` or `rvm`, ensure that they are loaded in your shell’s correct startup file. See [here](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#shell-startup-files) for more information.
 
-Once `haml` is installed, you must ensure it is in your system PATH so that SublimeLinter can find it. This may not be as straightforward as you think, so please read about [how linter executables are located](http://sublimelinter.readthedocs.org/en/latest/usage.html#how-linter-executables-are-located) in the documentation.
+### Linter configuration
+In order for `haml` to be executed by SublimeLinter, you must ensure that its path is available to SublimeLinter. Before going any further, please read and follow the steps in [“Finding a linter executable”](http://sublimelinter.readthedocs.org/en/latest/troubleshooting.html#finding-a-linter-executable) through “Validating your PATH” in the documentation.
 
-Once you have installed `haml` you can proceed to install the SublimeLinter-haml plugin if it is not yet installed.
+Once `haml` is installed and configured, you can proceed to install the SublimeLinter-haml plugin if it is not yet installed.
 
 ### Plugin installation
 Please use [Package Control](https://sublime.wbond.net/installation) to install the linter plugin. This will ensure that the plugin will be updated when new versions are available. If you want to install from source so you can modify the source code, you probably know what you are doing so we won’t cover that here.
