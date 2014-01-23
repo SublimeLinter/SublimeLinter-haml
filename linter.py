@@ -19,6 +19,9 @@ class Haml(RubyLinter):
 
     syntax = 'ruby haml'
     cmd = 'haml -c --stdin'
+    version_args = '--version'
+    version_re = r'(?P<version>\d+\.\d+\.\d+)'
+    version_requirement = '>= 4.0'
     regex = r'^(?:Syntax error on line (?P<line>\d+):|.+?[^:]:) (?P<message>.+)'
     error_stream = util.STREAM_STDERR
 
@@ -27,7 +30,7 @@ class Haml(RubyLinter):
         Return the components of the match.
 
         We override this to set the line/col to 0, 0 if a linter error occurs
-        and there is no line numebr.
+        and there is no line number.
 
         """
 
