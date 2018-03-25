@@ -1,29 +1,13 @@
-#
-# linter.py
-# Linter for SublimeLinter3, a code checking framework for Sublime Text 3
-#
-# Written by Aparajita Fishman
-# Copyright (c) 2015-2016 The SublimeLinter Community
-# Copyright (c) 2013-2014 Aparajita Fishman
-#
-# License: MIT
-#
-
-"""This module exports the Haml plugin class."""
-
 from SublimeLinter.lint import RubyLinter, util
 
 
 class Haml(RubyLinter):
-    """Provides an interface to haml."""
-
-    syntax = 'ruby haml'
     cmd = 'haml -c --stdin'
-    version_args = '--version'
-    version_re = r'(?P<version>\d+\.\d+\.\d+)'
-    version_requirement = '>= 4.0'
     regex = r'^(?:Syntax error on line (?P<line>\d+):|.+?[^:]:) (?P<message>.+)'
     error_stream = util.STREAM_STDERR
+    defaults = {
+        'selector': 'text.haml'
+    }
 
     def split_match(self, match):
         """
