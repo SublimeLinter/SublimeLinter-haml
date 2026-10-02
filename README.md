@@ -13,7 +13,7 @@ SublimeLinter must be installed in order to use this plugin.
 
 Please use [Package Control](https://packagecontrol.io) to install the linter plugin.
 
-Before using this plugin, ensure that `haml` (4.0.0 or later) is installed on your system.
+Before using this plugin, ensure that `haml` 6.0.0 or later is installed on your system (the linter runs `haml compile`; the `haml -c` option of older versions no longer exists).
 To install `haml`, do the following:
 
 1. Install [Ruby](http://www.ruby-lang.org).

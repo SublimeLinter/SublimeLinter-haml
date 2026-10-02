@@ -1,26 +1,16 @@
-from SublimeLinter.lint import RubyLinter, util
+from SublimeLinter.lint import RubyLinter
 
 
 class Haml(RubyLinter):
-    cmd = 'haml -c --stdin'
-    regex = r'^(?:Syntax error on line (?P<line>\d+):|.+?[^:]:) (?P<message>.+)'
-    error_stream = util.STREAM_STDERR
+    # haml has no check-only mode any more. `haml compile` prints the generated
+    # Ruby code and always exits with status 0, but a template that does not
+    # parse produces `raise Haml::SyntaxError.new(%q[message], line)` in that
+    # code. The line is zero-based.
+    cmd = 'haml compile -'
+    regex = (
+        r'^.*?raise Haml::SyntaxError\.new\(%q\[(?P<message>.*)\], (?P<line>\d+)\)'
+    )
+    line_col_base = (0, 0)
     defaults = {
         'selector': 'text.haml'
     }
-
-    def split_match(self, match):
-        """
-        Return the components of the match.
-
-        We override this to set the line/col to 0, 0 if a linter error occurs
-        and there is no line number.
-
-        """
-
-        match, line, col, error, warning, message, near = super().split_match(match)
-
-        if line is None:
-            line = col = 0
-
-        return match, line, col, error, warning, message, near
